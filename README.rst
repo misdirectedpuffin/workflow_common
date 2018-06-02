@@ -17,16 +17,7 @@ Usage
 Installation
 ------------
 
-Requirements
-^^^^^^^^^^^^
-
-Compatibility
--------------
-
 Licence
 -------
 
-Authors
--------
-
-`workflow_common` was written by `misdirectedpuffin <misdirectedpuffin@gmail.com>`_.
+MIT License
