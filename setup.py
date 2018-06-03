@@ -25,7 +25,7 @@ def get_requirements(file):
 
 setup(
     name="workflow_common",
-    version="0.0.1",
+    version=get_version(),
     url="https://github.com/misdirectedpuffin/workflow-common",
     author="misdirectedpuffin",
     author_email="misdirectedpuffin@gmail.com",
@@ -33,7 +33,7 @@ setup(
     long_description=open('README.rst').read(),
     packages=find_packages(),
     install_requires=['pytest-runner'],
-    tests_require=['pytest'],
+    tests_require=get_requirements('requirements_dev.txt'),
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Programming Language :: Python',
