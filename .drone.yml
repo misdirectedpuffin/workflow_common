@@ -10,11 +10,8 @@ pipeline:
     bucket: pypi.pumperkin.com
     access_key: access_key
     secret_key: secret_key
-    acl: public-read
     region: eu-west-1
     source: ./
     target: ./
-    exclude:
-      - '**/__pycache__/*'
     when:
       branch: master
