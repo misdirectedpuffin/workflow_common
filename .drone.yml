@@ -12,7 +12,7 @@ pipeline:
     secrets: [AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY]
     region: eu-west-1
     acl: public-read-write
-    source: ./dist/
-    target: ${DRONE_REPO_NAME}
+    source: ./dist/*
+    target: ${DRONE_REPO_NAME}/
     when:
       branch: master
