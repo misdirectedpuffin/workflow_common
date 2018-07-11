@@ -4,14 +4,15 @@ pipeline:
     commands:
       - pip install -r requirements.txt -r requirements_dev.txt
       - python -m pytest tests/ -v
+      - python3 setup.py sdist bdist_wheel
 
   pypi:
     image: plugins/s3
     bucket: pypi.pumperkin.com
-    access_key: access_key
-    secret_key: secret_key
+    secrets: [AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY]
     region: eu-west-1
-    source: /
-    target: /target/location
+    acl: public-read-write
+    source: dist/*
+    target: $DRONE_REPO_NAME/
     when:
       branch: master
