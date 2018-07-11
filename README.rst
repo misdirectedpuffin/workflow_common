@@ -1,5 +1,5 @@
-workflow_common
-===============
+common
+======
 
 .. image:: https://img.shields.io/pypi/v/workflow_common.svg
     :target: https://pypi.python.org/pypi/workflow_common
