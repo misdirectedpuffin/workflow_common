@@ -5,11 +5,16 @@ pipeline:
       - pip install -r requirements.txt -r requirements_dev.txt
       - python -m pytest tests/ -v
 
-  pypi_publish:
-    image: gjtempleton/drone-pypi
-    repository: http://pypi.pumperkin.com/
-    distributions:
-      - sdist
-      - bdist_wheel
+  pypi:
+    image: plugins/s3
+    bucket: pypi.pumperkin.com
+    access_key: access_key
+    secret_key: secret_key
+    acl: public-read
+    region: us-east-1
+    source: ./
+    target: ./
+    exclude:
+      - '**/__pycache__/*'
     when:
       branch: master
