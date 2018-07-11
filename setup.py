@@ -24,11 +24,10 @@ def get_requirements(file):
 
 
 setup(
-    name="workflow_common",
+    name="common",
     version=get_version(),
-    url="https://github.com/misdirectedpuffin/workflow-common",
+    url="https://bitbucket.org/misdirectedpuffin/common",
     author="misdirectedpuffin",
-    author_email="misdirectedpuffin@gmail.com",
     description="common lib for workflow plugins",
     long_description=open('README.rst').read(),
     packages=find_packages(),
