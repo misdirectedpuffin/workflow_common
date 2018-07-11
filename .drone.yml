@@ -14,5 +14,6 @@ pipeline:
     acl: public-read-write
     source: dist/**
     target: ${DRONE_REPO_NAME}/
+    strip_prefix: dist/
     when:
       branch: master
