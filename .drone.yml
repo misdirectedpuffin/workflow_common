@@ -12,6 +12,6 @@ pipeline:
     secret_key: secret_key
     region: eu-west-1
     source: /
-    target: /
+    target: /target/location
     when:
       branch: master
