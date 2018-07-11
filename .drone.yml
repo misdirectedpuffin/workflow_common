@@ -7,7 +7,7 @@ pipeline:
 
   pypi_publish:
     image: gjtempleton/drone-pypi
-    repository: http://pypi.pumperkin.com/pypi
+    repository: http://pypi.pumperkin.com/
     distributions:
       - sdist
       - bdist_wheel
