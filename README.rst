@@ -14,6 +14,8 @@ common lib for workflow plugins
 Usage
 -----
 
+Pip installable dependency for other libraries.
+
 Installation
 ------------
 
