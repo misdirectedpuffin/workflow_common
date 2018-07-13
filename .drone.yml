@@ -7,13 +7,10 @@ pipeline:
       - python3 setup.py sdist bdist_wheel
 
   pypi:
-    image: plugins/s3
+    image: misdirectedpuffin/s3-pypi-publisher
     bucket: pypi.pumperkin.com
-    secrets: [AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY]
     region: eu-west-1
-    acl: public-read-write
-    source: dist/**
-    target: ${DRONE_REPO_NAME}/
-    strip_prefix: dist/
+    wheel: true
+    sdist: true
     when:
       branch: master
